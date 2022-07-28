@@ -13,8 +13,8 @@ contract TicTacToe {
 
     //modifier to check that exactly two players are playing and to check that players are switched
     modifier playersChecker {
-        require(msg.sender == playerX || msg.sender == playerO, "Only players can call this function");
-        require(msg.sender == whosAction, "You cannot do this action until your opponent has chosen an action!");
+        require(msg.sender == playerX || msg.sender == playerO, "Only players!");
+        require(msg.sender == whosAction, "Wait your turn!");
         _;
     }
     
